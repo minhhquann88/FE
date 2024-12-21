@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video 3</title>
+  </head>
+  <body>
+    <!-- 1. Nhúng Iframe: Hiển thị trang web trên trang web -->
+    <iframe
+      src="https://qldt.ptit.edu.vn/#/home"
+      frameborder="0"
+      width="600"
+      height="500"
+      name="web_ptit"
+    ></iframe>
+    <!-- Click vào COCCOC thì thẻ iframe chuyển web coccoc -->
+    <a href="https://m.coccoc.com/search" target="web_ptit">COCCOC</a>
+    <br />
+
+    <!-- Link yt -->
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/lRsaDQtYqAo?si=AasBuq-jf5P-1nh2"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+    <!-- Bản đồ -->
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59604.67841314587!2d105.75239757910153!3d20.980912999999987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135accdd8a1ad71%3A0xa2f9b16036648187!2zSOG7jWMgdmnhu4duIEPDtG5nIG5naOG7hyBCxrB1IGNow61uaCB2aeG7hW4gdGjDtG5n!5e0!3m2!1svi!2s!4v1734728725971!5m2!1svi!2s"
+      width="600"
+      height="450"
+      style="border: 0"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+    <hr />
+
+    <!-- 2. Thẻ sematic(ngữ nghĩa): Là thẻ có nội dung giống tên thẻ đó -->
+    <!-- VD: article: Nội dung độc lập, khép kín -->
+    <!-- aside: Nội dụng ngoài nội dung trang -->
+    <!-- header:  Tiêu đề -->
+    <!-- footer: Chân trang -->
+    <!-- main: Nội dung chính -->
+    <!-- nav: Liên kết điều hướng -->
+    <!-- section: 1 phần trong tài liệu -->
+
+    <!-- 3. form: Thu thập thông tin đầu vào của người dùng -->
+    <!-- Atrribute form -->
+    <!-- action: Nơi dữ liệu được gửi -->
+    <!-- target: Nơi hiển thị kết quả -->
+    <!-- method: Xác định giao thức HTTP khi gửi form
+            GET: Nối dữ liệu vào URL theo cặp name/value; Không có tính bảo mật; Độ dài URL giới hạn
+            POST: Dữ liệu không hiển thị trên URL; Không giới hạn -->
+    <!-- autocomplete: Tự động gợi ý -->
+    <!-- novalidate: VD: email ko cần đúng định dạng vẫn đc -->
+
+    <!-- Element form -->
+    <!-- input : text, email, password, number, date, time, datetime-local, file, checkbox, radio(1 đáp án)
+                range(thanh trượt), color
+            Attribute input: value
+                          readonly: Đầu vào là chỉ đọc, được gửi khi gửi form
+                          disabled: Đầu vào bị vô hiệu hoá, không được gửi khi gửi form
+                          maxlength: Số kí tự tối đa
+                          min, max: Tối thiểu tối đa giá trị đầu vào
+                          placeholder: Gợi ý ngắn mô tả đầu vào
+                          required: Đầu vào được điền trc khi gửi -->
+    <!-- label: Nhãn cho element trong form
+          for_label = id_element -->
+    <!-- select - option: danh sách thả xuống
+          multiple: Chọn nhiều gtri -->
+    <!-- textarea: Nhập nhiều dòng
+          rows, cols: hàng, cột -->
+    <!-- button: Nút nhấn -->
+
+    <form
+      action="https://www.w3schools.com/action_page.php"
+      target="_blank"
+      method="get"
+      autocomplete="off"
+    >
+      <label for="ho_ten">Họ và tên</label>
+      <input type="text" id="ho_ten" name="hoten" placeholder="Tên" required />
+      <br />
+      <label for="color">Màu sắc:</label>
+      <select name="color" id="color" size="3" multiple>
+        <option value="yl">Vàng</option>
+        <option value="red" selected>Đỏ</option>
+        <option value="br">Nâu</option>
+      </select>
+      <br />
+      <label for="note">Ghi chú</label>
+      <textarea name="ghichu" id="note" rows="3" cols="20"></textarea>
+      <br />
+      <button>Đăng nhập</button>
+      <input type="submit" value="Gửi" />
+    </form>
+  </body>
+</html>
